@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    I wanted to do padding to all the texts but it won't result to any output , please tell me If I have anything wrong -->
+    <style>
+        header {grid-area: head;}
+        .right {grid-area: right ;}
+        main {grid-area: main;}
+        nav {grid-area: left ;}
+        footer {grid-area: foot;}
+
+        section{
+            display: grid;
+            height: 650px;
+            gap: 8px;
+            text-align: center;
+            
+            font-size: 20px;
+            color: aliceblue;
+            grid-template-areas: 
+            "head head head head"
+            "right main main left"
+            "right main main left "
+            "right main main left "
+            "right main main left "
+            "foot foot foot foot"
+            ;
+        }
+      
+        header{
+          grid-area: head;
+          background-color: rgb(63, 63, 154);
+          font-style: color white;
+         
+        }
+        nav .right{
+            grid-area: right;
+            background-color: mediumaquamarine ;  
+        }
+        main{
+            grid-area: main;
+            background-color: mediumpurple;
+        }
+        nav{
+            grid-area: left;
+            background-color: mediumaquamarine;
+
+        }
+        footer{
+            grid-area: foot;
+            background-color:rgb(63, 63, 154);
+        }
+      
+                
+      @media (max-width:650px){
+        section {
+            grid-template-areas:
+            "head "
+            "right "
+            "main "
+            "left "
+            "foot ";
+        }
+      }
+    </style>
+</head>
+<body>
+    <section>
+     
+        <header>HEADER</header>
+        <nav class ="right">SIDE NAVBAR</nav>
+        <main>MAIN CONTENT</main>
+        <nav>SIDE BAR</nav>
+        <footer>FOOTER</footer>
+     
+    </section>
+</body>
+</html>

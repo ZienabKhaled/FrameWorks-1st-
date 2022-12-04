@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    I wanted to do padding to all the texts but it won't result to any output , please tell me If I have anything wrong -->
+    <style>
+        body{
+            background-color: black;
+        }
+        header {grid-area: head;}
+        .right {grid-area: right ;}
+        main {grid-area: main;}
+        nav {grid-area: left ;}
+        footer {grid-area: foot;}
+
+        section{
+            display: grid;
+            height: 600px;
+            margin: 250px;
+            padding-right: 300px;
+            width: 850px;
+            gap: 4px;
+            text-align: center;
+            transform: rotate(45deg);
+            
+            font-size: 20px;
+            color: aliceblue;
+            grid-template-areas: 
+            "head left left"
+            "head left left"
+            "head left left"
+            "head left left"
+            "head left left"
+            "head main right"
+            "head main right"
+            "head main right"
+            "head main right"
+            "foot foot right"
+            "foot foot right"
+            "foot foot right"
+            "foot foot right"
+            ;
+        }
+      
+        header{
+          grid-area: head;
+          background-color: rgb(63, 63, 154);
+          font-style: color white;
+         
+        }
+        nav .right{
+            grid-area: right;
+            background-color: mediumaquamarine ;  
+        }
+        main{
+            grid-area: main;
+            background-color: mediumpurple;
+        }
+        nav{
+            grid-area: left;
+            background-color: rgb(226, 164, 102);
+
+        }
+        footer{
+            grid-area: foot;
+            background-color:rgb(53, 53, 205);
+        }
+      
+                
+      @media (max-width:650px){
+        section {
+            grid-template-areas:
+            "head "
+            "right "
+            "main "
+            "left "
+            "foot ";
+        }
+      }
+    </style>
+</head>
+<body>
+    <section>
+     
+        <header>1</header>
+        <nav>2</nav>
+        <main>3</main>
+        <nav class="right">4</nav>
+        <footer>5</footer>
+     
+    </section>
+</body>
+</html>
